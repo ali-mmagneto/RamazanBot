@@ -8,7 +8,7 @@
         "ramazan",
         "ezan"
     ],
-    "repository": "https://github.com/kursadHD/IftarSahur_bot",
+    "repository": "https://github.com/ali-mmagneto/RamazanBot",
     "env": {
         "BOT_TOKEN": {
             "description": "@BotFather'dan alın",
