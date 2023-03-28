@@ -1,6 +1,9 @@
 # iftarSahurBot
 Ramazan Ayına özel yazılmıș bir bot 😉
 
+# Heroku
+[Heroku Deploy](https://heroku.com/deploy?template=https://github.com/ali-mmagneto/RamazanBot)
+
 # Env Değișkenleri
 
 - BOT_TOKEN - @BotFather'dan al.
