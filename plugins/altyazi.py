@@ -4,10 +4,6 @@ from requests.structures import CaseInsensitiveDict
 
 from bs4 import BeautifulSoup
 import logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    handlers=[logging.FileHandler('log.txt'), logging.StreamHandler()],
-                    level=logging.INFO)
-LOGGER = logging.getLogger(name)
 
 from re import findall as re_findall 
 
@@ -40,7 +36,6 @@ async def planet(bot, message):
            co = BeautifulSoup(log.content, "lxml")
            bultoken = co.find('div', attrs={"class":"tebel-scroll"})
            bult = bultoken.find("input")
-           LOGGER.info(bult)
            token = bult.get("value")
            bul = co.find('a', attrs={"class":"subButton download_btn_enable"})
            uniquekey = bul.get("rel-tag")
@@ -56,8 +51,7 @@ async def planet(bot, message):
            request = _global_session.post(
                url="https://planetdp.org/subtitle/download",
                data=data,
-               cookies=cookies)
-           LOGGER.info(request.content)           
+               cookies=cookies)      
            file_name = "altyazidosyası.rar"
            content = request.content
            with open(file_name, "wb") as dosya:
